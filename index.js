@@ -9,6 +9,7 @@ import authRouter from './routes/auth-routes.js'
 import otpRouter from './routes/otp-routes.js'
 import imgRouter from './routes/img-routes.js'
 import fileUpload from 'express-fileupload'
+import contactRoutes from './routes/contact-routes.js'
 
 dotenv.config()
 const __dirname = dirname(fileURLToPath(import.meta.url))
@@ -27,6 +28,7 @@ app.use('/users', usersRouter)
 app.use('/auth', authRouter)
 app.use('/otp', otpRouter)
 app.use('/img', imgRouter)
+app.use('/api', contactRoutes)
 
 app.listen(PORT, () => {
     console.log(`Neura is listening to port ${PORT}`)

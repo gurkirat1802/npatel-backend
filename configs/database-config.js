@@ -18,6 +18,7 @@ const databaseConfig = {
     psqlFunction_insertNewImage: 'insert_image_details',
     psqlFunction_getImageList: 'get_image_list',
     psqlFunction_uploadComplete: 'upload_complete',
+    psqlFunction_insertContact: 'insert_contact_details',
 }
 
 export default databaseConfig
