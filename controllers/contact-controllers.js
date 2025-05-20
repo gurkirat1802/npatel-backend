@@ -9,11 +9,20 @@ export const contactFormController = async (req, res) => {
         
         const { name, email, subject, message } = req.body
 
-        // Validate inputs
+        // Input validation
         if (!name || !email || !subject || !message) {
             return res.status(400).json(generalResponseModel({
                 code: 1400,
                 msg: "Missing required fields"
+            }))
+        }
+
+        // Email format validation
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+        if (!emailRegex.test(email)) {
+            return res.status(400).json(generalResponseModel({
+                code: 1400,
+                msg: "Invalid email format"
             }))
         }
 

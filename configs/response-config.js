@@ -103,4 +103,12 @@ export const responseObject = [
         code: 2112,
         msg: "Image table update success."
     },
+    {
+        code: 2119,
+        msg: "Contact form submission success."
+    },
+    {
+        code: 1119,
+        msg: "Contact form submission failure."
+    },
 ]
